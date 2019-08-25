@@ -1,0 +1,58 @@
+{
+  "name": "parallel-design",
+  "version": "0.0.0",
+  "description": "components library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "story": "start-storybook -p 6006",
+    "build-story": "build-storybook"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "styled-components"
+  ],
+  "author": "Ioannis Theodosiou",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-options": "^5.1.11",
+    "@storybook/addon-viewport": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-flowtype": "^4.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "flow-bin": "^0.106.1",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "storybook-readme": "^5.0.8",
+    "stylelint": "^10.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "styled-components": "^4.3.2"
+  }
+}

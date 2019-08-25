@@ -1,0 +1,129 @@
+import { css } from 'styled-components';
+
+import { colors, fonts as font, themeProps } from '../../config';
+
+const { disabled, primary, dark, white, black } = colors;
+
+const inputHeight = 32; /** TO have relevant font sizes for input and feedback */
+const inputPadding = 2; /** TO have same padding for input, feedback and label */
+
+export const labelColor = black;
+export const inputBorder = 2;
+export const borderStyle = 'solid';
+export const inputBorderColor = dark;
+export const inputDisabledColor = disabled;
+export const inputActiveColor = primary;
+export const borderRadius = '3px';
+export { white };
+
+export const input = {
+	border: {
+		color: {
+			default: inputBorderColor,
+			disabled: inputDisabledColor,
+			active: inputActiveColor
+		},
+		width: `${inputBorder}px`,
+		style: borderStyle,
+		radius: borderRadius
+	},
+	choice: {
+		color: white
+	},
+	common: css`
+		text-indent: 0px;
+		text-shadow: none;
+		display: inline-block;
+		text-align: start;
+		background-color: white;
+		cursor: text;
+		margin: 0em;
+		border: ${inputBorder}px ${borderStyle};
+		font-size: ${inputHeight / 2}px;
+		width: 100%;
+		outline: 0;
+		padding: 2px;
+		color: ${themeProps('color.dark', dark)};
+		border-radius: ${borderRadius};
+		&:active,
+		&:focus {
+			border-color: ${themeProps('color.primary', inputActiveColor)};
+		}
+		&:disabled {
+			border-color: ${themeProps('color.disabled', inputDisabledColor)};
+		}
+	`,
+	text: css`
+		height: ${inputHeight}px;
+	`,
+	textarea: css`
+		height: ${inputHeight * 4}px;
+	`,
+	feedback: {
+		icon: css`
+			font-size: ${inputHeight / 2}px;
+			padding: ${inputHeight / 4}px;
+		`,
+		message: css`
+			font-size: ${inputHeight / 2 - 2}px;
+			margin: 0 ${inputBorder + inputPadding}px;
+		`
+	},
+	hidden: css`
+		display: inline;
+		opacity: 0;
+		width: 0;
+		margin: 0;
+		overflow: hidden;
+		appearance: none;
+		&:checked {
+			& + label:after {
+				opacity: 1;
+			}
+		}
+		&:disabled {
+			& + label {
+				pointer-events: none;
+			}
+
+			& + label:after {
+				opacity: 1;
+				background: ${white};
+			}
+		}
+	`
+};
+
+export const label = {
+	color: themeProps('color.dark', labelColor),
+	common: css`
+		width: 100%;
+		font-family: initial;
+		font-weight: initial;
+		font-size: ${font.fontSizeBase};
+	`,
+	/** Checkbox Radio Components */
+	choice: css`
+		cursor: pointer;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			transition: opacity 200ms ease, border-color 200ms ease;
+		}
+		&:before {
+			left: 0;
+			top: 5px;
+			width: 24px;
+			height: 24px;
+			border: ${inputBorder}px ${borderStyle};
+		}
+
+		&:after {
+			top: 12px;
+			left: 7px;
+			width: 10px;
+			opacity: 0;
+		}
+	`
+};

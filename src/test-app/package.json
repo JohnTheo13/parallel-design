@@ -1,0 +1,50 @@
+{
+  "name": "@info/test-app",
+  "version": "0.0.2",
+  "description": "cra test",
+  "author": "Ioannis Theodosiou <ioannis@info.nl>",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnTheo13/parallel-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JohnTheo13/parallel-design/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "buttons": "^0.0.0-y.0",
+    "inputs": "^0.0.0-y.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
