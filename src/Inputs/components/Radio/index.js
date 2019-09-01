@@ -1,5 +1,6 @@
 // @flow
 /* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
 import FieldWrapper from './Radio.style';

@@ -5,7 +5,7 @@ import { addReadme } from 'storybook-readme';
 addDecorator(addReadme)
 setOptions({
   name: 'parallel-design',
-  url: 'https://bitbucket.info.nl/projects/IDS/repos/parallel-design/browse',
+  url: 'https://github.com/JohnTheo13/parallel-design',
 	panelPosition: 'right'
 });
 
