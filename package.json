@@ -7,10 +7,10 @@
     "test": "jest",
     "story": "start-storybook -p 6006",
     "build-story": "build-storybook",
-		"prepublish": "babel --root-mode upward src --out-dir lib",
-		"flow": "node_modules/.bin/flow",
-		"eslint": "node_modules/.bin/eslint src/",
-		"stylelint": "node_modules/.bin/stylelint src/",
+    "prepublish": "babel --root-mode upward src --out-dir lib",
+    "flow": "node_modules/.bin/flow",
+    "eslint": "node_modules/.bin/eslint src/",
+    "stylelint": "node_modules/.bin/stylelint src/",
     "lint": "eslint src; exit 0",
     "lint:fix": "eslint src --fix; exit 0",
     "lint:css": "stylelint './src/**/*style.js'",
@@ -53,7 +53,6 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "flow-bin": "^0.106.1",
-    "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
     "lint-staged": "^9.2.5",
@@ -75,8 +74,8 @@
   },
   "husky": {
     "hooks": {
-			"pre-commit": "lint-staged",
-			"pre-push": "npm test -- --coverage"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test -- --coverage"
     }
   },
   "lint-staged": {
