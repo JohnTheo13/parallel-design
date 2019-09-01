@@ -14,7 +14,7 @@ type ButtonType = {
 	children: Node
 };
 
-const Button = ({ children, ...props }: ButtonType) => (
+const Button = ({ children, ...props }: ButtonType) => ( 
 	<StyledButton {...props}>{children}</StyledButton>
 );
 
