@@ -2,11 +2,12 @@
   "name": "parallel-design",
   "version": "0.0.0",
   "description": "components library",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "story": "start-storybook -p 6006",
     "build-story": "build-storybook",
+    "prepublish": "babel --root-mode upward src --out-dir lib",
     "lint": "eslint src; exit 0",
     "lint:fix": "eslint src --fix; exit 0",
     "lint:css": "stylelint './src/**/*style.js'",
