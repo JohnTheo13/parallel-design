@@ -8,10 +8,6 @@
     "story": "start-storybook -p 6006",
     "build-story": "build-storybook",
     "prepublish": "babel --root-mode upward src --out-dir lib",
-    "flow": "node_modules/.bin/flow",
-    "eslint": "node_modules/.bin/eslint src/",
-    "stylelint": "node_modules/.bin/stylelint src/",
-    "lint": "eslint src; exit 0",
     "lint:fix": "eslint src --fix; exit 0",
     "lint:css": "stylelint './src/**/*style.js'",
     "build-storybook": "build-storybook -s ./public"

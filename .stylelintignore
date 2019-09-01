@@ -1,3 +1,5 @@
 **/*test.js
 **/*story.js
 /type-def-libs
+*.md
+*.json
