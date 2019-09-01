@@ -6,7 +6,12 @@
   "scripts": {
     "test": "jest",
     "story": "start-storybook -p 6006",
-    "build-story": "build-storybook"
+    "build-story": "build-storybook",
+    "lint": "eslint src; exit 0",
+    "lint:fix": "eslint src --fix; exit 0",
+    "lint-staged": "lint-staged",
+    "lint:css": "stylelint './src/**/*.js'",
+    "build-storybook": "build-storybook -s ./public"
   },
   "keywords": [
     "react",
@@ -33,6 +38,8 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.2.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.1.0",
@@ -43,10 +50,17 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "flow-bin": "^0.106.1",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.3",
+    "lint-staged": "^9.2.5",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
     "prettier-stylelint": "^0.4.2",
+    "react": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
     "storybook-readme": "^5.0.8",
+    "styled-components": "^4.3.2",
     "stylelint": "^10.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0"
@@ -54,5 +68,15 @@
   "peerDependencies": {
     "react": "^16.9.0",
     "styled-components": "^4.3.2"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "flow check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "style.js": "stylelint"
+  },
+  "pre-commit": "lint-staged"
 }
