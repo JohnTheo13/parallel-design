@@ -3,12 +3,7 @@ Parallel-Design
 publishe?
 ## Project setup & maintenance
 1. Clone the project
-1. Install lerna globaly ```npm i -g lerna```
-1. Add the project dependecies with ```lerna bootstrap```
-1. To add a new package(component) run ```lerna create <name> --es-module```
 1. To start storybook just ```yarn start```
-1. To create a dependece to an internal package(component) ```lerna add <internalPackage> --scope=<dependentpackage>```
-ex: We want the grocery package to depend on both the apple and banana packages. We run: ```lerna add apple banana --scope=grocery```
 
 ## How to use
 Import the component(s) you want to use into your project, there are four ways to change the styling:
@@ -53,14 +48,14 @@ Import the component(s) you want to use into your project, there are four ways t
 	```
 
 
-### Update theme*
- 1. Simple usage:
-	- [color pallet](./packages/config#readme)
- 1. Extended usage:
-	- [inputs](./packages/inputs#readme)
-	- [buttons](./packages/buttons#readme)
-	- [icons](./packages/icons#readme)
-	- [header](./packages/header#readme)
+# Documentation
+ 1. Simple usage*:
+	- [configuration](./configuration/README#readme)
+ 1. [Extended usage](./components/Inputs#readme):
+	- [Inputs](./components/Inputs#readme)
+	- [Buttons](./components/Buttons#readme)
+	- [Icons](./components/Icons#readme)
+	- [Header](./components/Header#readme)
 
 ### Description
 React components to use accross your project, key values:
