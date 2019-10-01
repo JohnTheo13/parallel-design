@@ -50,8 +50,8 @@ Import the component(s) you want to use into your project, there are four ways t
 
 # Documentation
  1. Simple usage*:
-	- [configuration](./docs/configuration/README#readme)
- 1. [Extended usage](./docs/components/Inputs#readme):
+	- [configuration](./docs/configuration#readme)
+ 1. [Extended usage](./docs/components#readme):
 	- [Inputs](./docs/components/Inputs#readme)
 	- [Buttons](./docs/components/Buttons#readme)
 	- [Icons](./docs/components/Icons#readme)
