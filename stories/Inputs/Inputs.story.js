@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-knobs';
 
 import { Input, Checkbox, Radio } from '../../src';
-import README from '../../src/Inputs/README.md';
+import README from '../../docs/components/Inputs.md';
 
 const theme = {
 	input: {
