@@ -50,12 +50,12 @@ Import the component(s) you want to use into your project, there are four ways t
 
 # Documentation
  1. Simple usage*:
-	- [configuration](./configuration/README#readme)
- 1. [Extended usage](./components/Inputs#readme):
-	- [Inputs](./components/Inputs#readme)
-	- [Buttons](./components/Buttons#readme)
-	- [Icons](./components/Icons#readme)
-	- [Header](./components/Header#readme)
+	- [configuration](./docs/configuration/README#readme)
+ 1. [Extended usage](./docs/components/Inputs#readme):
+	- [Inputs](./docs/components/Inputs#readme)
+	- [Buttons](./docs/components/Buttons#readme)
+	- [Icons](./docs/components/Icons#readme)
+	- [Header](./docs/components/Header#readme)
 
 ### Description
 React components to use accross your project, key values:
