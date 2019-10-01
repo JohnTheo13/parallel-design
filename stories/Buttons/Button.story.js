@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 
 import { Button } from '../../src';
-import ButtonReadme from '../../src/Buttons/README.md'
+import ButtonReadme from '../../docs/components/Buttons.md'
 
 const theme = {
 	button: {

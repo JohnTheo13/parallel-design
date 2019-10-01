@@ -5,7 +5,8 @@ import { withKnobs, select, object, color } from '@storybook/addon-knobs';
 import { ThemeProvider } from 'styled-components'
 
 import { Header } from '../../src';
-import { theme as defaultTheme } from '../../src/config'
+import { theme as defaultTheme } from '../../src/config';
+import HeaderReadme from '../../docs/components/Header.md'
 
 export default storiesOf('Headers', module)
 	.addDecorator(withKnobs)
@@ -26,6 +27,16 @@ export default storiesOf('Headers', module)
 			</Header>
     </Fragment>
 	))
+	.addParameters({
+		readme: {
+			content: `<!-- STORY --><!-- PROPS -->`,
+			// This is not necessary in normal situation. The reason for
+			// `includePropTables` is needed here is because `ButtonWithPropTypes` is
+			// specified in `excludePropTables` at `config.js`
+			includePropTables: [Header],
+			sidebar: HeaderReadme
+		},
+	}) 
 	.add('Header with ThemeProvider', () => (
 		<Fragment>
 			<ThemeProvider theme={defaultTheme}>
