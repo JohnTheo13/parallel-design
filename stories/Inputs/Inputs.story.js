@@ -6,7 +6,8 @@ import {
 	select,
 	text,
 	boolean,
-	object
+	object,
+	number
 } from '@storybook/addon-knobs';
 
 import { Input, Checkbox, Radio } from '../../src';
@@ -19,7 +20,8 @@ const theme = {
 				// active: 'red',
 				// default: 'grey',
 				// disabled: 'yellow'
-			}
+			},
+			radius: 2
 		},
 		common: css`
 		 	border-width: 0 0 2px 0;
@@ -28,6 +30,7 @@ const theme = {
 		 	padding: 4px;
 		 	border-radius: 0;
 			width: 100%;
+			box-sizing: border-box;
 		 `
 	},
 	feedback: {
@@ -65,8 +68,9 @@ storiesOf('Inputs', module)
 	})
 	.add(
 		'Input simple & info',() => (
-			<Fragment>
+			<div style={{ width: '200px'}}>
 				<Input
+					height={number('height', 40)}
 					placeholder="test"
 					label="Label"
 					name="test"
@@ -86,7 +90,7 @@ storiesOf('Inputs', module)
 					feedback={object('theme-feedback', { status: 'success', message: 'error' })}
 				/>
 				</ThemeProvider>
-			</Fragment>
+			</div>
 		))
 		.addParameters({
 			readme: {

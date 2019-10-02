@@ -13,17 +13,19 @@ export const borderStyle = 'solid';
 export const inputBorderColor = dark;
 export const inputDisabledColor = disabled;
 export const inputActiveColor = primary;
-export const borderRadius = '3px';
+export const borderRadius = '3';
 export { white };
 
 export const input = {
+	height: inputHeight,
+	padding: inputPadding,
 	border: {
 		color: {
 			default: inputBorderColor,
 			disabled: inputDisabledColor,
 			active: inputActiveColor
 		},
-		width: `${inputBorder}px`,
+		width: inputBorder,
 		style: borderStyle,
 		radius: borderRadius
 	},
@@ -45,6 +47,7 @@ export const input = {
 		padding: 2px;
 		color: ${themeProps('color.dark', dark)};
 		border-radius: ${borderRadius};
+		box-sizing: border-box;
 		&:active,
 		&:focus {
 			border-color: ${themeProps('color.primary', inputActiveColor)};
@@ -53,26 +56,9 @@ export const input = {
 			border-color: ${themeProps('color.disabled', inputDisabledColor)};
 		}
 	`,
-	text: css`
-		height: ${inputHeight}px;
-	`,
-	textarea: css`
-		height: ${inputHeight * 4}px;
-	`,
-	feedback: {
-		icon: css`
-			font-size: ${inputHeight / 2}px;
-			padding: ${inputHeight / 4}px;
-		`,
-		message: css`
-			font-size: ${inputHeight / 2 - 2}px;
-			margin: 0 ${inputBorder + inputPadding}px;
-		`
-	},
 	hidden: css`
 		display: inline;
 		opacity: 0;
-		width: 0;
 		margin: 0;
 		overflow: hidden;
 		appearance: none;
@@ -120,8 +106,8 @@ export const label = {
 		}
 
 		&:after {
-			top: 12px;
-			left: 7px;
+			top: 14px;
+			left: 9px;
 			width: 10px;
 			opacity: 0;
 		}

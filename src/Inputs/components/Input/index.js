@@ -10,6 +10,7 @@ type InputType = {
 	type?: string,
 	label?: string,
 	width?: string,
+	height?: number,
 	/** one of: 'error' | 'warning' | 'success' */
 	feedback?: {
 		status: 'error' | 'warning' | 'success',
@@ -24,8 +25,15 @@ const iconMap = {
 	success: 'done'
 };
 
-const Input = ({ type, label, width, feedback, ...props }: InputType) => (
-	<FieldWrapper feedback={feedback} width={width}>
+const Input = ({
+	type,
+	label,
+	width,
+	feedback,
+	height,
+	...props
+}: InputType) => (
+	<FieldWrapper feedback={feedback} width={width} height={height}>
 		{!!label && <label htmlFor={props.name}>{label}</label>}
 		{feedback && feedback.status && (
 			<i className="material-icons">{iconMap[feedback.status]}</i>
@@ -44,6 +52,7 @@ const Input = ({ type, label, width, feedback, ...props }: InputType) => (
 Input.defaultProps = {
 	type: 'text',
 	width: '100%',
+	height: 30,
 	feedback: undefined,
 	label: ''
 };

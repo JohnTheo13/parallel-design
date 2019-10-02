@@ -19,7 +19,7 @@ const CheckboxWrapper = styled.div`
 	position: relative;
 	label {
 		${themeProps('label.common', common)};
-		line-height: 2;
+		line-height: 2.4;
 		margin: 0 36px; /* checkbox width + margin 12px */
 		${themeProps('label.choice', choice)};
 		&:before {
@@ -79,7 +79,7 @@ const CheckboxWrapper = styled.div`
 				transform: rotate(0);
 				width: 10px;
 				height: 2px;
-				top: 15px;
+				top: 17px;
 			}
 		}
 		${themeProps('input.hidden', hidden)};
