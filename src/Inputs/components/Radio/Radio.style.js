@@ -18,7 +18,7 @@ const FieldWrapper = styled.div`
 	position: relative;
 	label {
 		${themeProps('label.common', common)};
-		line-height: 2;
+		line-height: 2.4;
 		margin: 0 36px; /* Bullet width + margin 12px */
 		color: ${themeProps('label.color', themeProps('color.dark', labelColor))};
 		${themeProps('label.choice', choice)};
