@@ -9,6 +9,7 @@ const FieldWrapper = styled.div`
 	width: ${({ width }) => width};
 	position: relative;
 	label {
+		color: ${(themeProps('label.color'), label.color)};
 		${themeProps('label.common', label.common)};
 		display: block;
 		margin: 0 0.2rem 0 4px;

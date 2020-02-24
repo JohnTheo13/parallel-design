@@ -81,7 +81,7 @@ export const input = {
 };
 
 export const label = {
-	color: themeProps('color.dark', labelColor),
+	color: labelColor,
 	common: css`
 		width: 100%;
 		font-family: initial;
