@@ -1,6 +1,6 @@
 Parallel-Design
 ================
-publishe?
+Component Library
 ## Project setup & maintenance
 1. Clone the project
 1. To start storybook just ```yarn start```
